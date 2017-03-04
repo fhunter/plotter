@@ -1,5 +1,14 @@
 include <constants.scad>;
 
+module railbearing() {
+color("white") {
+	rotate([0,90,0]) {
+	 difference() {
+		 cylinder(d=bearingouterdiameter, h=bearinglength,center=true);
+		 cylinder(d=raildiameter,h=bearinglength+1,center=true);
+	}}
+}}
+
 module table() {
     color("cyan")
         translate([xraillength/2,yraillength/2,6])
